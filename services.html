@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
   #bgchange
   {
@@ -16,8 +17,82 @@
   }
   #bgchange1
   {
-    background-color: black;
+    background-color: rgb(37, 35, 35);
   }
+  </style>
+  <style>
+    a{
+      color: rgb(240, 240, 240);
+      text-decoration: none;
+      color: inherit;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    h3
+    {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'Arial Narrow', Arial, sans-serif, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    }
+    h2
+    {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+  <style>
+    .hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color:white;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color:white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.text1
+{
+  font-family: monospace;
+}
+.text2
+{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.buttonchange
+{
+  --c:  #d53030ee; /* the color*/
+  
+  box-shadow: 0 0 0 .1em inset var(--c); 
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: 
+    var(--_g) calc(var(--_p,0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p,0%)) 0%,
+    var(--_g) calc(var(--_p,0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p,0%)) 100%;
+  background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+  outline-offset: .1em;
+  transition: background-size .4s, background-position 0s .4s;
+}
+.buttonchange:hover {
+  --_p: 100%;
+  transition: background-position .4s, background-size 0s;
+}
+.buttonchange:active {
+  box-shadow: 0 0 9e9q inset #0009; 
+  background-color: var(--c);
+  color: #fff;
+}
+
   </style>
 </head>
 <body id="bgchange">
@@ -37,7 +112,7 @@
                     <a class="nav-link me-5 " href="services.html"><b>SERVICES</b></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link me-5 border border-dark rounded" href="#" tabindex="-1" aria-disabled="true"><i class="bi bi-telephone"></i><b>CONTACT</b></a>
+                    <a class="nav-link me-5 border border-dark" href="#" tabindex="-1" aria-disabled="true"><i class="bi bi-telephone"></i><b>CONTACT</b></a>
                   </li>
                 </ul>
               </div>
@@ -213,7 +288,7 @@
                 </b>
                </h5>
         </div>
-                <div class="container-fluid">
+        <div class="container-fluid">
                     <div id="carouselExampleFade" class="carousel slide carousel-fade " data-bs-ride="carousel">
                       <div class="carousel-inner col-lg-8 col-md-10 col-sm-12">
                         <div class="carousel-item active ">
@@ -236,11 +311,98 @@
                 At Jasy Builders, we are the creative force behind groundbreaking designs for your builder company. <br> Our architects seamlessly blend form and function, delivering innovative and visually stunning blueprints.
             </div>
         </div>
+       <div class="row">
+           <div class="col-6">
+            <div class="text-secondary fw-monospace mt-5 ms-2">
+              CONTACT   <i class="bi bi-arrow-right"></i>
+         </div>
+           </div>
+         <div class="col-6 mt-4">
+           <div>
+            <h1> <u>Contact Sales </u></h1>
+           </div>
+           <div class="fw-light mt-3">
+            <p>Drop us your email and we will contact you immediately</p>
+           </div>
+           <form class=" col-lg-6 col-md-8 col-sm-12">
+          <div>
+            <label class="form">NAME :</label>
+            <input type="text" id="name" class="form-control" placeholder="Your Name" >
+          </div>
+          <div>
+            <label class="form">Email :</label>
+            <input type="email" id="email" class="form-control" placeholder="Your Email" >
+          </div>
+          <div class="mt-5">
+              <button class="btn btn-outline-danger text-dark  buttonchange"><a href="mailto:smohammedyusuf193@gmail.com" class="text-dark" >Submit</a></button>
+          </div>
+          </form>
+         </div>
+       </div>
 
-        <hr class="mt-5">
-        <div id="bgchange1" class="text-light">
-                wertyuiksssssssssssssssssssssssssssssss
-
+      
+        <div id="bgchange1" class="text-light mt-5">
+                <div class="row">
+                   <div class="col-md-3">
+                      <h2 class="text-start ms-5 mt-5">JASY
+                        <br>BUILDERS
+                      </h2>
+                   </div>
+                   <div class=" col-md-3 mt-3 ms-4"><h3 class="fw-light">LINKS</h3>
+                         <p><a href="index.html" class="hover-underline-animation text-light" target="_blank">Home</a></p>
+                          <br>
+                          <p>
+                            <a href="About.html" class="hover-underline-animation text-light" target="_blank">About us</a>
+                          </p>
+                          <br>
+                          <p><a href="services.html" class="hover-underline-animation text-light" target="_blank">Services</a></p>
+                          <br>
+                          <p><a href="contact.html" class="hover-underline-animation text-light" target="_blank">Contact</a></p>
+                   </div>
+                   <div class=" col-md-3 mt-3 ms-4"> <h3 class="fw-light">Social</h3>
+                        <p>
+                          <a href="#" class="hover-underline-animation text-light">Facebook</a>
+                        </p>
+                        <br>
+                        <p>
+                          <a href="#" class="hover-underline-animation text-light">Instagram</a>
+                        </p>
+                        <br>
+                       <p>
+                        <a href="#" class="hover-underline-animation text-light"> Twitter</a>
+                       </p>
+                        <br>
+                        <p>
+                          <a href="#" class="hover-underline-animation text-light">Linkedin</a>
+                        </p>
+                   </div>
+                   <div class="col-md-2 mt-3 ms-4">
+                    <h3>Address</h3>                              
+                      <p class="text2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. nesciunt soluta vitae earum cumque.  voluptate ab esse rerum quam incidunt?
+                        Bengaluru</p>
+                   </div>
+                   <hr>
+              <div class="text-center text1">
+                copyright @ 2023 JASY BUILDERS
+              </div>
+              <h6 class="fw-lighter text-center"> Developed by Yusuf</h6>
+                </div>
         </div>
+        <!-- <script src=" https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+          function sendemail(){
+            Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "smohammedyusuf193@gmail.com",
+            Password : "1F33850E57B2589558B22964297C49811B7E",
+            To : 'abdulsajid5354@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "contact form enquiry",
+            Body : "And this is the body"
+         }).then(
+         message => alert("message sent successfully")
+         );  
+          }
+        </script> -->
 </body>
 </html>
