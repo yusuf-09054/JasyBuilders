@@ -35,6 +35,16 @@
     {
       font-family: Arial, Helvetica, sans-serif;
     }
+    input
+    {
+      font-weight: bold;
+      width: 100%;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid black;
+      outline: none;
+    }
   </style>
   <style>
     .hover-underline-animation {
@@ -92,13 +102,37 @@
   background-color: var(--c);
   color: #fff;
 }
+.hover-animation-navbar
+{
+  display: inline-block;
+  position: relative;
+  color:rgb(0, 0, 0);
+}
+.hover-animation-navbar::after
+{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color:rgb(0, 0, 0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.hover-animation-navbar:hover::after
+{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
   </style>
 </head>
 <body id="bgchange">
     <div class="container-fluid">
         <nav class="navbar navbar-light navbar-expand-lg" style="background-color:rgb(255, 255, 255);">
-              <a class="navbar-brand ms-5" href="/index.html"><i class="bi bi-house-door"></i></a>
+              <a class="navbar-brand ms-5 hover-animation-navbar" href="/index.html"><i class="bi bi-house-door"></i></a>
               <a class="brand" style="margin: 0;float: none;text-align: center;" href="#"><img src="logo2.jpg" alt="logo" class="ms-5" width="200px"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -106,13 +140,13 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                   <li class="nav-item">
-                    <a class="nav-link me-5  " aria-current="page" href="#"><b>ABOUT US</b></a>
+                    <a class="hover-animation-navbar nav-link me-5  " aria-current="page" href="About.html"><b>ABOUT US</b></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link me-5 " href="services.html"><b>SERVICES</b></a>
+                    <a class=" hover-animation-navbar nav-link me-5" href="services.html"><b>SERVICES</b></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link me-5 border border-dark" href="#" tabindex="-1" aria-disabled="true"><i class="bi bi-telephone"></i><b>CONTACT</b></a>
+                    <a class="hover-animation-navbar nav-link me-5" href="contact.html" tabindex="-1" aria-disabled="true"><i class="bi bi-telephone"></i><b>CONTACT</b></a>
                   </li>
                 </ul>
               </div>
@@ -324,19 +358,25 @@
            <div class="fw-light mt-3">
             <p>Drop us your email and we will contact you immediately</p>
            </div>
-           <form class=" col-lg-6 col-md-8 col-sm-12">
-          <div>
-            <label class="form">NAME :</label>
-            <input type="text" id="name" class="form-control" placeholder="Your Name" >
-          </div>
-          <div>
-            <label class="form">Email :</label>
-            <input type="email" id="email" class="form-control" placeholder="Your Email" >
+           <!-- <form class=" col-lg-6 col-md-8 col-sm-12">
+          <div class="mt-5">
+            <input type="text"  placeholder="Your Name" id="name" >
           </div>
           <div class="mt-5">
-              <button class="btn btn-outline-danger text-dark  buttonchange"><a href="mailto:smohammedyusuf193@gmail.com" class="text-dark" >Submit</a></button>
+            <input type="text" placeholder="Your Email" id="email" >
           </div>
-          </form>
+          <div class="mt-5">
+              <button class="btn btn-outline-danger text-dark  buttonchange">Submit</button>
+          </div>
+          </form> -->
+          <form action="https://formsubmit.co/smohammedyusuf193@gmail.com" method="POST">
+            <input class="mt-4" type="text" name="name" placeholder="Name" required>
+            <input class="mt-4" type="email" name="email" placeholder="Email Address" required>
+            <!-- <input type="hidden" name="_next" value="https://JASYBUILDERS/thankyou.html"> -->
+            <div class="mt-5">
+              <button class="btn btn-outline-danger text-dark  buttonchange">Submit</button>
+          </div>
+       </form>
          </div>
        </div>
 
@@ -348,7 +388,7 @@
                         <br>BUILDERS
                       </h2>
                    </div>
-                   <div class=" col-md-3 mt-3 ms-4"><h3 class="fw-light">LINKS</h3>
+                   <div class=" col-md-3 mt-3 ms-4"><h3 class="fw-light me-5"> <i class="bi bi-arrow-right"></i>LINKS<i class="bi bi-arrow-left"></i></h3>
                          <p><a href="index.html" class="hover-underline-animation text-light" target="_blank">Home</a></p>
                           <br>
                           <p>
@@ -359,7 +399,7 @@
                           <br>
                           <p><a href="contact.html" class="hover-underline-animation text-light" target="_blank">Contact</a></p>
                    </div>
-                   <div class=" col-md-3 mt-3 ms-4"> <h3 class="fw-light">Social</h3>
+                   <div class=" col-md-3 mt-3 ms-4"> <h3 class="fw-light me-5"> <i class="bi bi-arrow-right"></i>SOCIAL<i class="bi bi-arrow-left"></i></h3>
                         <p>
                           <a href="#" class="hover-underline-animation text-light">Facebook</a>
                         </p>
@@ -377,7 +417,7 @@
                         </p>
                    </div>
                    <div class="col-md-2 mt-3 ms-4">
-                    <h3>Address</h3>                              
+                    <h3> <i class="bi bi-arrow-right"></i>ADDRESS<i class="bi bi-arrow-left"></i></h3>                              
                       <p class="text2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. nesciunt soluta vitae earum cumque.  voluptate ab esse rerum quam incidunt?
                         Bengaluru</p>
                    </div>
@@ -400,9 +440,21 @@
             Subject : "contact form enquiry",
             Body : "And this is the body"
          }).then(
-         message => alert("message sent successfully")
+         message =>{
+          if (message == "OK"){
+            Swal.fire({
+                title: "Success!",
+                text: "Sent Successfully!",
+                icon: "success"
+              });
+        }
+         }
+         
          );  
           }
-        </script> -->
+        </script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="script.js"></script> -->
 </body>
 </html>

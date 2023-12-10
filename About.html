@@ -15,11 +15,38 @@
         background-image: linear-gradient(990deg,rgb(242, 242, 242) rgb(221, 221, 221));
     }
     </style>
+    <style>
+      .hover-animation-navbar
+{
+  display: inline-block;
+  position: relative;
+  color:rgb(0, 0, 0);
+}
+.hover-animation-navbar::after
+{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color:rgb(0, 0, 0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.hover-animation-navbar:hover::after
+{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+    </style>
 </head>
-<body id="bgchange">
+<body id="bgchange" class="container-fluid">
     <div>
         <nav class="navbar navbar-light navbar-expand-lg" style="background-color:rgb(255, 255, 255);">
-              <a class="navbar-brand ms-5" href="/index.html"><i class="bi bi-house-door"></i></a>
+              <a class="navbar-brand ms-5  hover-animation-navbar" href="/index.html"><i class="bi bi-house-door"></i></a>
               <a class="brand" style="margin: 0;float: none;text-align: center;" href="#"><img src="logo2.jpg" alt="logo" class="ms-5" width="200px"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -27,17 +54,54 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                   <li class="nav-item">
-                    <a class="nav-link me-5 border border-dark rounded" aria-current="page" href="#"><b>ABOUT US</b></a>
+                    <a class=" hover-animation-navbar nav-link me-5 " aria-current="page" href="About.html"><b>ABOUT US</b></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link me-5 border border-dark rounded" href="#"><b>SERVICES</b></a>
+                    <a class=" hover-animation-navbar nav-link me-5 " href="services.html"><b>SERVICES</b></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link me-5 border border-dark rounded" href="#" tabindex="-1" aria-disabled="true"><i class="bi bi-telephone"></i><b>CONTACT</b></a>
+                    <a class=" hover-animation-navbar nav-link me-5" href="contact.html" tabindex="-1" aria-disabled="true"><i class="bi bi-telephone"></i><b>CONTACT</b></a>
                   </li>
                 </ul>
               </div>
           </nav>
     </div>
-</body>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="mt-5 ms-1 ">
+          <h2 >
+           <u> ABOUT US </u>
+          </h2>
+        </div>
+      </div>
+      <div class="col-md-6 ">
+        <div class="mt-5 ">
+           <h2><b>
+            The best place to find the best housing
+             in your city - we are the best in the market.
+           </b>
+          </h2>
+        </div>
+      </div>
+    </div>
+
+  
+    <p class="text-muted mt-3 ms-2">
+      At  <b>JASY BUILDERS </b>, we take pride in turning visions into reality through expert craftsmanship and unwavering commitment to quality. With a legacy spanning <b>2 years</b>, we have established ourselves as a trusted name in the construction industry. Our team of seasoned builders is dedicated to delivering projects that not only meet but exceed expectations.
+    </p>
+    <p class="text-muted mt-2 ms-2">
+      What sets us apart is our meticulous attention to detail and a passion for innovation. From residential developments to commercial spaces, we approach each project with a unique blend of creativity and technical expertise. Our commitment to excellence is reflected in every brick laid and every structure erected.
+    </p>
+    <p class="text-muted mt-2 mb-0 ms-2">
+      At <b>JASY BUILDERS </b> , we believe in building more than structures; we build lasting relationships. Our journey is marked by a portfolio of successfully completed projects and satisfied clients. Join us in creating a future where quality meets innovation, and dreams find a place to call home. Welcome to a world of craftsmanship, integrity, and unparalleled dedication
+    </p>
+    <p class="text-muted mt-2 mb-0 ms-2">
+      We take pride in not just building structures but crafting environments that stand the test of time. Committed to excellence, we invite you to embark on a construction journey with us, where your vision becomes our mission, and every build is a masterpiece.
+    </p>
+    <h1 class="text-center mt-5"><b class="fst-italic text-dark">WELCOME TO JASY BUILDERS</b></h1>
+
+      <div>
+        <img src="/im.jpg" alt="">
+      </div>
+    </body>
 </html>
