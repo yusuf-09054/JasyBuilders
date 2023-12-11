@@ -14,8 +14,43 @@
     {
         background-image: linear-gradient(990deg,rgb(242, 242, 242) rgb(221, 221, 221));
     }
+    #bgchange1
+  {
+    background-color: rgb(37, 35, 35);
+  }
     </style>
     <style>
+       .hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color:white;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color:white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.text1
+{
+  font-family: monospace;
+}
+.text2
+{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
       .hover-animation-navbar
 {
   display: inline-block;
@@ -40,7 +75,56 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+.container {
+  position: relative;
+  width: 68%;
+}
+.image {
+  width: 100%;
+  height: 100%;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transition: .3s ease;
+}
+.container:hover .overlay {
+  transform: scale(1);
+}
+.text3{
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
 
+    </style>
+    <style>
+       a{
+      color: rgb(240, 240, 240);
+      text-decoration: none;
+      color: inherit;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    h3
+    {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'Arial Narrow', Arial, sans-serif, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    }
+    h2
+    {
+      font-family: Arial, Helvetica, sans-serif;
+    }
     </style>
 </head>
 <body id="bgchange" class="container-fluid">
@@ -98,10 +182,61 @@
     <p class="text-muted mt-2 mb-0 ms-2">
       We take pride in not just building structures but crafting environments that stand the test of time. Committed to excellence, we invite you to embark on a construction journey with us, where your vision becomes our mission, and every build is a masterpiece.
     </p>
-    <h1 class="text-center mt-5"><b class="fst-italic text-dark">WELCOME TO JASY BUILDERS</b></h1>
-
-      <div>
-        <img src="/im.jpg" alt="">
+    
+    <div class="container col-lg-6 col-md-8 col-sm-10">
+      <img src="im.jpg" alt="Avatar" class="image">
+      <div class="overlay">
+        <div class="text3"><h1 class="text-center mt-5"><b class="fst-italic text-dark">WELCOME TO <br> JASY BUILDERS</b></h1></div>
       </div>
+    </div>
+
+    
+    <div id="bgchange1" class="text-light mt-5">
+      <div class="row">
+         <div class="col-md-3">
+            <h2 class="text-start ms-5 mt-5">JASY
+              <br>BUILDERS
+            </h2>
+         </div>
+         <div class=" col-md-3 mt-3 ms-4"><h3 class="fw-light me-5"> <i class="bi bi-arrow-right"></i>LINKS<i class="bi bi-arrow-left"></i></h3>
+               <p><a href="index.html" class="hover-underline-animation text-light" target="_blank">Home</a></p>
+                <br>
+                <p>
+                  <a href="About.html" class="hover-underline-animation text-light" target="_blank">About us</a>
+                </p>
+                <br>
+                <p><a href="services.html" class="hover-underline-animation text-light" target="_blank">Services</a></p>
+                <br>
+                <p><a href="contact.html" class="hover-underline-animation text-light" target="_blank">Contact</a></p>
+         </div>
+         <div class=" col-md-3 mt-3 ms-4"> <h3 class="fw-light me-5"> <i class="bi bi-arrow-right"></i>SOCIAL<i class="bi bi-arrow-left"></i></h3>
+              <p>
+                <a href="#" class="hover-underline-animation text-light">Facebook</a>
+              </p>
+              <br>
+              <p>
+                <a href="#" class="hover-underline-animation text-light">Instagram</a>
+              </p>
+              <br>
+             <p>
+              <a href="#" class="hover-underline-animation text-light"> Twitter</a>
+             </p>
+              <br>
+              <p>
+                <a href="#" class="hover-underline-animation text-light">Linkedin</a>
+              </p>
+         </div>
+         <div class="col-md-2 mt-3 ms-4">
+          <h3> <i class="bi bi-arrow-right"></i>ADDRESS<i class="bi bi-arrow-left"></i></h3>                              
+            <p class="text2 me-3">Lorem ipsum, dolor amet consectetur adipisicing elit.
+              Bengaluru</p>
+         </div>
+         <hr>
+    <div class="text-center text1">
+      copyright @ 2023 JASY BUILDERS
+    </div>
+    <h6 class="fw-lighter text-center"> Developed by Yusuf</h6>
+      </div>
+</div>
     </body>
 </html>
