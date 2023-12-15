@@ -126,7 +126,99 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+.animate-charcter
+{
+   text-transform:capitalize;
+  background-image: linear-gradient(
+    -225deg,
+    #000000 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #b24565 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 40px;
+}
 
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.fadetext1
+{
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #262424, #fff, #262525);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+.fadetext1
+{
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #262424, #fff, #262525);
+  background-repeat: round;
+  background-size: 80%;
+  animation: animate 5s infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+span {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1em;
+  position: relative;
+  transform: translate(-50%,-50%);
+  background-image: linear-gradient(rgb(254, 0, 0), rgb(255, 255, 255));
+  background-size: 100% 10px;
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+  transition: background-size .7s, background-position .5s ease-in-out;
+}
+
+span:hover {
+  background-size: 100% 100%;
+  background-position: 0% 10%;
+  transition: background-position .7s, background-size .5s ease-in-out;
+}
   </style>
 </head>
 <body id="bgchange">
@@ -152,13 +244,20 @@
               </div>
         </nav>
 
-        <div class="display-6 ms-2 mt-2">
-            <u>
-                OUR SERVICES
-            </u>
-        </div>
-        <div class="mt-5 mb-0 ms-2">
-            <h1>Jasy Builder's support services</h1>
+        <div class="row">
+          <div class="col-md-3">
+              <div class=" ms-2 mt-5">
+                <h2 class="fadetext1">
+                    OUR SERVICES
+                </h2>
+            </div>
+          </div>  
+            <div class="col-md-8">
+              <div class="mt-5 mb-0 ms-2">
+                <h1 class="animate-charcter">
+                  Jasy Builder's support services</h1>
+              </div>
+            </div>
         </div>
         <div class="mt-5 mb-0 ms-2">
             <h5 class="text-dark mb-4">
@@ -353,7 +452,7 @@
            </div>
          <div class="col-6 mt-4">
            <div>
-            <h1> <u>Contact Sales </u></h1>
+            <h1><span> Contact Sales</span> </h1>
            </div>
            <div class="fw-light mt-3">
             <p>Drop us your email and we will contact you immediately</p>
@@ -384,11 +483,11 @@
         <div id="bgchange1" class="text-light mt-5">
                 <div class="row">
                    <div class="col-md-3">
-                      <h2 class="text-start ms-5 mt-5">JASY
+                      <h2 class="fadetext1 text-start ms-5 mt-5">JASY
                         <br>BUILDERS
                       </h2>
                    </div>
-                   <div class=" col-md-3 mt-3 ms-4"><h3 class="fw-light me-5"> <i class="bi bi-arrow-right"></i>LINKS<i class="bi bi-arrow-left"></i></h3>
+                   <div class=" col-md-3 mt-3 ms-4"><h3 class="fw-light me-5"> LINKS</h3>
                          <p><a href="index.html" class="hover-underline-animation text-light" target="_blank">Home</a></p>
                           <br>
                           <p>
@@ -399,7 +498,7 @@
                           <br>
                           <p><a href="contact.html" class="hover-underline-animation text-light" target="_blank">Contact</a></p>
                    </div>
-                   <div class=" col-md-3 mt-3 ms-4"> <h3 class="fw-light me-5"> <i class="bi bi-arrow-right"></i>SOCIAL<i class="bi bi-arrow-left"></i></h3>
+                   <div class=" col-md-3 mt-3 ms-4"> <h3 class="fw-light me-5"> SOCIAL</h3>
                         <p>
                           <a href="#" class="hover-underline-animation text-light">Facebook</a>
                         </p>
@@ -417,7 +516,7 @@
                         </p>
                    </div>
                    <div class="col-md-2 mt-3 ms-4">
-                    <h3> <i class="bi bi-arrow-right"></i>ADDRESS<i class="bi bi-arrow-left"></i></h3>                              
+                    <h3> ADDRESS</h3>                              
                       <p class="text2">Lorem ipsum,sit amet consectetur adipisicing elit.
                         Bengaluru</p>
                    </div>

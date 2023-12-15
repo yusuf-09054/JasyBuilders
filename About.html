@@ -108,7 +108,58 @@
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
 }
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #000000 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #b24565 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 30px;
+}
 
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.fadetext1
+{
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #262424, #fff, #262525);
+  background-repeat: round;
+  background-size: 80%;
+  animation: animate 5s infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
     </style>
     <style>
        a{
@@ -153,14 +204,14 @@
     <div class="row">
       <div class="col-md-3">
         <div class="mt-5 ms-1 ">
-          <h2 >
+          <h2 class="fadetext1" >
            <u> ABOUT US </u>
           </h2>
         </div>
       </div>
       <div class="col-md-6 ">
         <div class="mt-5 ">
-           <h2><b>
+           <h2 class="animate-charcter"><b>
             The best place to find the best housing
              in your city - we are the best in the market.
            </b>
@@ -198,7 +249,7 @@
               <br>BUILDERS
             </h2>
          </div>
-         <div class=" col-md-3 mt-3 ms-4"><h3 class="fw-light me-5"> <i class="bi bi-arrow-right"></i>LINKS<i class="bi bi-arrow-left"></i></h3>
+         <div class=" col-md-3 mt-3 ms-4"><h3 class="fw-light me-5">LINKS</h3>
                <p><a href="index.html" class="hover-underline-animation text-light" target="_blank">Home</a></p>
                 <br>
                 <p>
@@ -209,7 +260,7 @@
                 <br>
                 <p><a href="contact.html" class="hover-underline-animation text-light" target="_blank">Contact</a></p>
          </div>
-         <div class=" col-md-3 mt-3 ms-4"> <h3 class="fw-light me-5"> <i class="bi bi-arrow-right"></i>SOCIAL<i class="bi bi-arrow-left"></i></h3>
+         <div class=" col-md-3 mt-3 ms-4"> <h3 class="fw-light me-5"> SOCIAL</h3>
               <p>
                 <a href="#" class="hover-underline-animation text-light">Facebook</a>
               </p>
@@ -227,7 +278,7 @@
               </p>
          </div>
          <div class="col-md-2 mt-3 ms-4">
-          <h3> <i class="bi bi-arrow-right"></i>ADDRESS<i class="bi bi-arrow-left"></i></h3>                              
+          <h3>ADDRESS</h3>                              
             <p class="text2 me-3">Lorem ipsum, dolor amet consectetur adipisicing elit.
               Bengaluru</p>
          </div>
