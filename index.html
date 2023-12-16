@@ -2,6 +2,7 @@
 <html lang="en">
 <head> 
     <title>JASY Builders</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico.jpg1-modified.png">
     <meta name="description" content="JASY Builders - A Highly Professional, 2D & 3D Architecture, Interior Designer & consulting services.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-0.1,user scalable=no">   
@@ -120,12 +121,41 @@
     background-position: 200% center;
   }
 }
-  </style>
+.fadetext1
+{
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #262424, #a7a7a7, #262525);
+  background-repeat: round;
+  background-size: 80%;
+  animation: animate 5s infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+ </style>
   </head>
 <body id="bgchange" class="container-fluid">
   <div>
       <nav class="navbar navbar-light navbar-expand-lg" style="background-color:rgb(255, 255, 255);">
-            <a class="navbar-brand ms-5 hover-animation-navbar" href="/index.html"><i class="bi bi-house-door"></i></a>
+            <a class="active navbar-brand ms-5 hover-animation-navbar" href="/index.html"><i class="bi bi-house-door"></i></a>
             <a class="brand" style="margin: 0;float: none;text-align: center;" href="#"><img src="logo2.jpg" alt="logo" class="ms-5" width="200px"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -178,7 +208,9 @@
           <div class="col-6">
             <div class="mt-5 ms-1 col-lg-6 col-md-10 col-sm-12">
               <h4 class="text-secondary">
-               <u> ABOUT US </u> <i class="bi bi-arrow-right"></i>
+              <a class="text-secondary" href="About.html">
+                <u> ABOUT US </u> <i class="bi bi-arrow-right"></i>
+              </a>
               </h4>
             </div>
           </div>
@@ -200,14 +232,16 @@
         </p>
         <p class="text-muted mt-2 mb-0 ms-2">
           At <b>JASY BUILDERS </b> , we believe in building more than structures; we build lasting relationships. Our journey is marked by a portfolio of successfully completed projects and satisfied clients. Join us in creating a future where quality meets innovation, and dreams find a place to call home. Welcome to a world of craftsmanship, integrity, and unparalleled dedication — <b class="fst-italic text-dark">WELCOME TO JASY BUILDERS</b>
-          <a href="#">Readmore</a>
+          <a href="About.html" class="text-primary">Readmore...</a>
         </p>
       <div class="col-lg-12 col-md-10 col-sm-8 mt-5">
         <div class="row">
           <div class="col-6">
               <div>
                   <h4 class="ms-3 mt-5 text-secondary ">
-                   <u>OUR SERVICES </u> <i class="bi bi-arrow-right"></i>
+                  <a class="text-secondary" href="services.html">
+                    <u>OUR SERVICES </u> <i class="bi bi-arrow-right"></i>
+                  </a>
                   </h4>
               </div>
           </div>
@@ -341,10 +375,15 @@
         </div>
       </div>
   </div>	
+
+  <div class="container col-lg-6 col-md-8 col-sm-10">
+    <img class="image" src="./gif2.gif" alt="photo">
+  </div>
+
   <div id="bgchange1" class="text-light mt-5">
     <div class="row">
        <div class="col-md-3">
-          <h2 class="text-start ms-5 mt-5">JASY
+          <h2 class="fadetext1 text-start ms-5 mt-5">JASY
             <br>BUILDERS
           </h2>
        </div>
